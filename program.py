@@ -1,5 +1,7 @@
+
 import math
 import time
+
 
 while True:
     a = int(10)
@@ -47,8 +49,15 @@ while True:
 
     if fhgeimok > 2000 and fagbicod <3000:
         print("Otrzymujesz bonus, -10% wartości zamówienia")
-        print(str("do zapłaty po odliczeniu rabatu",pro, "zł!"))
-        break
+        print("do zapłaty po odliczeniu rabatu",pro, "zł!\n\n")
+        odp = str(input("Czy chcesz dodać kolejne zamówienie? Wpisz T/N  "))
+        if(odp=="T"or odp=="t"):
+                print("\n\nPrzekierowuję do wyboru produktów!")
+                time.sleep(3)
+        if(odp=="N"or odp=="n"):
+                print("\n\nDziękujemy za zakupy, zapraszamy ponownie!\n\n")
+                break
+        
     elif fagbicod >0 and fagbicod<3000:
         print("Twoje zamówienie o wartości", fhgeimok, "zł", "i masie",fagbicod,"kg", "zostało przyjęte, opłać je przy kasie!")
         odp = str(input("Czy chcesz dodać kolejne zamówienie? Wpisz T/N  "))
