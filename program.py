@@ -2,80 +2,80 @@
 import math
 import time
 
-
-while True:
-    a = int(10)
-    b = int(100)
-    c = int(200)
-    d = int(150)
-
-
-    print(str("\n\n\n\n\n\nMożesz wybrać tylko 3000kg produktów z pośród \ngrochu 5zł za opakowanie 10kg\ncukru 200zł za opakowanie 100kg\nkapusty 30zł za opakowanie 200kg\nbambusa 50zł za opakowanie 150kg\n\n\n\n", ))
-    f = int(input("Wybierz ile opakowań   GROCHU   chcesz?  ") )
-    g = int(input("Wybierz ile opakowań   CUKRU   chcesz?  "))
-    i = int(input("Wybierz ile opakowań   KAPUSTY   chcesz?  "))
-    o = int(input("Wybierz ile opakowań   BAMBUSA   chcesz?  "))
+def funkcja():
+    while True:
+        a = int(10)
+        b = int(100)
+        c = int(200)
+        d = int(150)
 
 
-    h = int(5)
-    e = int(200)
-    m = int(30)
-    k = int(50)
-    print("\n\n\n")
-    print(f*a, "kg grochu ", " w cenie", (f*h))
-    print(g*b, "kg cukru ", " w cenie", (g*e))
-    print(i*c, "kg kapusty ", " w cenie", (i*m))
-    print(o*d, "kg bambusa ", " w cenie", (o*k))
-
-    print("\n\n")
-
-    fa = (f*a)
-    gb = (g*b)
-    ic = (i*c)
-    od = (o*d)
+        print(str("\n\n\n\n\n\nMożesz wybrać tylko 3000kg produktów z pośród \ngrochu 5zł za opakowanie 10kg\ncukru 200zł za opakowanie 100kg\nkapusty 30zł za opakowanie 200kg\nbambusa 50zł za opakowanie 150kg\n\n\n\n", ))
+        f = int(input("Wybierz ile opakowań   GROCHU   chcesz?  ") )
+        g = int(input("Wybierz ile opakowań   CUKRU   chcesz?  "))
+        i = int(input("Wybierz ile opakowań   KAPUSTY   chcesz?  "))
+        o = int(input("Wybierz ile opakowań   BAMBUSA   chcesz?  "))
 
 
+        h = int(5)
+        e = int(200)
+        m = int(30)
+        k = int(50)
+        print("\n\n\n")
+        print(f*a, "kg grochu ", " w cenie", (f*h))
+        print(g*b, "kg cukru ", " w cenie", (g*e))
+        print(i*c, "kg kapusty ", " w cenie", (i*m))
+        print(o*d, "kg bambusa ", " w cenie", (o*k))
 
-    fh = (f*h)
-    ge = (g*e)
-    im = (i*m)
-    ok = (o*k)
+        print("\n\n")
+
+        fa = (f*a)
+        gb = (g*b)
+        ic = (i*c)
+        od = (o*d)
 
 
-    fagbicod = int(fa+gb+ic+od)    #masa
-    fhgeimok = int(fh+ge+im+ok)    #cena
 
-    pro = int(0.9*fhgeimok)
+        fh = (f*h)
+        ge = (g*e)
+        im = (i*m)
+        ok = (o*k)
 
-    if fhgeimok > 2000 and fagbicod <3000:
-        print("Otrzymujesz bonus, -10% wartości zamówienia")
-        print("do zapłaty po odliczeniu rabatu",pro, "zł!\n\n")
-        odp = str(input("Czy chcesz dodać kolejne zamówienie? Wpisz T/N  "))
-        if(odp=="T"or odp=="t"):
-                print("\n\nPrzekierowuję do wyboru produktów!")
-                time.sleep(3)
-        if(odp=="N"or odp=="n"):
-                print("\n\nDziękujemy za zakupy, zapraszamy ponownie!\n\n")
-                break
+
+        fagbicod = int(fa+gb+ic+od)    #masa
+        fhgeimok = int(fh+ge+im+ok)    #cena
+
+        pro = int(0.9*fhgeimok)
+
+        if fhgeimok > 2000 and fagbicod <3000:
+            print("Otrzymujesz bonus, -10% wartości zamówienia")
+            print("do zapłaty po odliczeniu rabatu",pro, "zł!\n\n")
+            odp = str(input("Czy chcesz dodać kolejne zamówienie? Wpisz T/N  "))
+            if(odp=="T"or odp=="t"):
+                    print("\n\nPrzekierowuję do wyboru produktów!")
+                    time.sleep(3)
+            if(odp=="N"or odp=="n"):
+                    print("\n\nDziękujemy za zakupy, zapraszamy ponownie!\n\n")
+                    break
         
-    elif fagbicod >0 and fagbicod<3000:
-        print("Twoje zamówienie o wartości", fhgeimok, "zł", "i masie",fagbicod,"kg", "zostało przyjęte, opłać je przy kasie!")
-        odp = str(input("Czy chcesz dodać kolejne zamówienie? Wpisz T/N  "))
-        if(odp=="T"or odp=="t"):
-                print("\n\nPrzekierowuję do wyboru produktów!")
-                time.sleep(3)
-        if(odp=="N"or odp=="n"):
-                print("\n\nDziękujemy za zakupy, zapraszamy ponownie!\n\n")
-                break
-    else:
-        print("Zamówiłeś",fagbicod, "kg produktów w cenie", fhgeimok, "Masa twojego zamóienia przekracza dopuszczalny limit. \nProsimy złożyć zamówienie ponownie.")
-        time.sleep(5)
+        elif fagbicod >0 and fagbicod<3000:
+            print("Twoje zamówienie o wartości", fhgeimok, "zł", "i masie",fagbicod,"kg", "zostało przyjęte, opłać je przy kasie!")
+            odp = str(input("Czy chcesz dodać kolejne zamówienie? Wpisz T/N  "))
+            if(odp=="T"or odp=="t"):
+                    print("\n\nPrzekierowuję do wyboru produktów!")
+                    time.sleep(3)
+            if(odp=="N"or odp=="n"):
+                    print("\n\nDziękujemy za zakupy, zapraszamy ponownie!\n\n")
+                    break
+        else:
+            print("Zamówiłeś",fagbicod, "kg produktów w cenie", fhgeimok, "Masa twojego zamóienia przekracza dopuszczalny limit. \nProsimy złożyć zamówienie ponownie.")
+            time.sleep(5)
 
 
 
-    print("\n\n")
+        print("\n\n")
     
-
+funcja()
 
 
     
